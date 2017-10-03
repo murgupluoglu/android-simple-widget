@@ -1,4 +1,4 @@
-# simple-widget
+# AppWidget
 Android Homescreen widget(Appwidget) sample
 
 # updatePeriodMillis
