@@ -31,3 +31,11 @@ You can update your appwidget inside from Activity or Fragment
  int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(context, WidgetProvider.class));
  appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_list);
 ```
+If you aren't use ListView , you can update with
+```java
+ AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context.getApplicationContext());
+ int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(context.getApplicationContext(), WidgetProvider.class));
+ if (appWidgetIds.length > 0) {
+   new WidgetProvider().onUpdate(context.getApplicationContext(), appWidgetManager, appWidgetIds);
+ }
+ ```
