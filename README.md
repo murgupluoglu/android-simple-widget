@@ -14,6 +14,15 @@ If you think to just put two TextView on screen, again use ListView. Because if 
  
  - Updates requested with updatePeriodMillis will not be delivered more than once every 30 minutes.
  - If you think android:updatePeriodMillis not working, don't forgot to add android:exported="true" at your receiver. After that if onUpdate not triggered check super.onReceive inside onReceive method. 
+ - If you want to update your widget more than once every 30 minutes , you must use AlarmManager and set android:updatePeriodMillis to 0
+ 
+ ```java
+ Intent alarm = new Intent(context, MainActivity.class);
+ alarm.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+ alarm.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
+ pendingIntent = PendingIntent.getBroadcast(context, 0, alarm, PendingIntent.FLAG_CANCEL_CURRENT);
+ alarmManager.setRepeating(AlarmManager.RTC, System.currentTimeMillis(),1000, pendingIntent);
+ ```
 
 # Update Widget Outside
 You can update your appwidget inside from Activity or Fragment
