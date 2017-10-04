@@ -17,7 +17,7 @@ If you think to just put two TextView on screen, again use ListView. Because if 
  - If you want to update your widget more than once every 30 minutes , you must use AlarmManager and set android:updatePeriodMillis to 0
  
  ```java
- Intent alarm = new Intent(context, MainActivity.class);
+ Intent alarm = new Intent(context, WidgetProvider.class);
  alarm.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
  alarm.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, appWidgetIds);
  pendingIntent = PendingIntent.getBroadcast(context, 0, alarm, PendingIntent.FLAG_CANCEL_CURRENT);
