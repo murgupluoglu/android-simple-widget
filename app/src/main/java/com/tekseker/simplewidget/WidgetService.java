@@ -20,7 +20,6 @@ public final class WidgetService extends RemoteViewsService {
 
         /** Label to display in the list. */
         public final String mLabel;
-        /** The file which this item represents, sent with the {@link WidgetProvider#EXTRA_CLICKED_FILE} extra. */
         public final String mFile;
 
         public WidgetItem(String mLabel, String mFile) {
