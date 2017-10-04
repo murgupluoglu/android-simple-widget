@@ -18,7 +18,7 @@ If you think to just put two TextView on screen, again use ListView. Because if 
 # Update Widget Outside
 You can update your appwidget inside from Activity or Fragment
 ```java
-        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-        int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(context, WidgetProvider.class));
-        appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_list);
+ AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+ int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(context, WidgetProvider.class));
+ appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_list);
 ```
