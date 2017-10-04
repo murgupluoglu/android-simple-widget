@@ -3,6 +3,7 @@ package com.tekseker.simplewidget;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -20,6 +21,8 @@ public class WidgetProvider extends AppWidgetProvider {
     private static final String LIST_ITEM_CLICKED_ACTION = "LIST_ITEM_CLICKED_ACTION";
     private static final String REFRESH_WIDGET_ACTION = "REFRESH_WIDGET_ACTION";
     public static final String EXTRA_CLICKED_FILE = "EXTRA_CLICKED_FILE";
+
+    public static final String ACTION_WIDGET_UPDATE = "android.appwidget.action.APPWIDGET_UPDATE";
 
 
     /**
@@ -89,6 +92,11 @@ public class WidgetProvider extends AppWidgetProvider {
                 Toast toast2 = Toast.makeText(context, "REFRESH_WIDGET_ACTION", Toast.LENGTH_SHORT);
                 toast2.setGravity(Gravity.CENTER, 0, 0);
                 toast2.show();
+                break;
+            case ACTION_WIDGET_UPDATE:
+                AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+                int appWidgetIds[] = appWidgetManager.getAppWidgetIds(new ComponentName(context, WidgetProvider.class));
+                appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.widget_list);
                 break;
         }
     }
