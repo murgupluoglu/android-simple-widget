@@ -9,16 +9,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by mustafa.urgupluoglu on 02/10/17.
+/*
+ *  Created by Mustafa Ürgüplüoğlu on 02.10.2017.
+ *  Copyright © 2021 Mustafa Ürgüplüoğlu. All rights reserved.
  */
 
 public final class WidgetService extends RemoteViewsService {
 
 
+    @Override
+    public RemoteViewsFactory onGetViewFactory(Intent intent) {
+        return new ListRemoteViewsFactory(getApplicationContext());
+    }
+
     public static final class WidgetItem {
 
-        /** Label to display in the list. */
+        /**
+         * Label to display in the list.
+         */
         public final String mLabel;
         public final String mFile;
 
@@ -26,11 +34,6 @@ public final class WidgetService extends RemoteViewsService {
             this.mLabel = mLabel;
             this.mFile = mFile;
         }
-    }
-
-    @Override
-    public RemoteViewsFactory onGetViewFactory(Intent intent) {
-        return new ListRemoteViewsFactory(getApplicationContext());
     }
 
     public static class ListRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory {

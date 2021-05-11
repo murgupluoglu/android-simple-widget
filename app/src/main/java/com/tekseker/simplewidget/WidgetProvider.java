@@ -18,12 +18,10 @@ import android.widget.Toast;
 
 public class WidgetProvider extends AppWidgetProvider {
 
+    public static final String EXTRA_CLICKED_FILE = "EXTRA_CLICKED_FILE";
+    public static final String ACTION_WIDGET_UPDATE = "android.appwidget.action.APPWIDGET_UPDATE";
     private static final String LIST_ITEM_CLICKED_ACTION = "LIST_ITEM_CLICKED_ACTION";
     private static final String REFRESH_WIDGET_ACTION = "REFRESH_WIDGET_ACTION";
-    public static final String EXTRA_CLICKED_FILE = "EXTRA_CLICKED_FILE";
-
-    public static final String ACTION_WIDGET_UPDATE = "android.appwidget.action.APPWIDGET_UPDATE";
-
 
     /**
      * "This is called to update the App Widget at intervals defined by the updatePeriodMillis attribute in the

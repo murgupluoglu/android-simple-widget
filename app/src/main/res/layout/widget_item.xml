@@ -2,7 +2,7 @@
     android:id="@+id/widget_item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp" >
+    android:padding="10dp">
 
     <!--
          See http://stackoverflow.com/questions/16278159/why-linearlayouts-margin-is-being-ignored-if-used-as-listview-row-view

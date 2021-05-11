@@ -9,9 +9,9 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Go to device home screen and add widget.\nName = SimpleWidget , Icon = Android default icon"
-        android:gravity="center"
         android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="Go to device home screen and add widget.\nName = SimpleWidget , Icon = Android default icon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
