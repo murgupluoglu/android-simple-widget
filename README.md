@@ -8,7 +8,7 @@ If you think to just put two TextView on screen, again use ListView. Because if 
 
 [WeatherListWidget Sample](https://github.com/android/platform_development/tree/master/samples/WeatherListWidget)
 
-[Google Developer Training Sample](https://google-developer-training.gitbooks.io/android-developer-advanced-course-practicals/content/unit-1-expand-the-user-experience/lesson-2-app-widgets/2-1-p-app-widgets/2-1-p-app-widgets.html)
+[Google Developer Training Sample](https://google-developer-training.github.io/android-developer-advanced-course-practicals/unit-1-expand-the-user-experience/lesson-2-app-widgets/2-1-p-app-widgets/2-1-p-app-widgets.html)
 
 
 
